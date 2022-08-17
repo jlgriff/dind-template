@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  docker:
+    image: docker:dind
+    restart: always
+    privileged: yes
+    volumes:
+      - type: bind
+        source: ./../my-local-app
+        target: /app
